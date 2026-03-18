@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cadencea</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT -->
+    <link rel="icon" type="image/png"
+        href="https://freepngdesign.com/content/uploads/images/banana-style-letter-c-4363.png" sizes="96x96">
+
+    <style>
+        body {
+            margin: 0;
+            background: #121212;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(180deg, #000, #252525);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid red;
+        }
+
+        .logo {
+            font-family: 'Orbitron';
+            font-size: 8vw;
+            letter-spacing: 6px;
+            margin: 0;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        /* 🔥 HOVER ANIMATION BACK */
+        .logo:hover {
+            transform: scale(1.1);
+            text-shadow: 0 0 20px white, 0 0 40px white;
+        }
+
+        .header h3 {
+            color: #ff4d4d;
+            letter-spacing: 2px;
+        }
+
+        /* GAME CARD */
+        .game {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px;
+            align-items: center;
+        }
+
+        .game img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            border: 2px solid #333;
+            transition: 0.3s;
+        }
+
+        /* 🔥 RED GLOW EFFECT BACK */
+        .game img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px red, 0 0 40px red;
+        }
+
+        .game-text {
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .title {
+            color: red;
+            font-family: 'Orbitron';
+            margin-left: 30px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* MOBILE FIX */
+        @media (max-width: 768px) {
+            .game {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                text-align: center;
+                margin-left: 0;
+            }
+
+            /* Disable hover scaling on mobile (prevents glitch) */
+            .logo:hover,
+            .game img:hover {
+                transform: none;
+                box-shadow: none;
+                text-shadow: none;
+            }
+        }
+
+        /* POPUP */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .popup-content {
+            background: #1e2a38;
+            padding: 20px;
+            margin: 30% auto;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: cyan;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1 class="logo"><a href="https://shourya-sinha6754.github.io/Cadencea/">
+                <font style="color:#ffffff;"><u> CADENCEA </h1></a></font></u>
+        <h3>NEW ERA OF GAMES</h3>
+    </div>
+    <marquee style="background: #1a1a1a; padding: 12px 0; border-bottom: 1px solid #333;">
+        <h5 style="color:#b0b0b0; margin:0; font-weight: normal;">
+            Please note that Cadencea and its members don't support any illegal file downloads. All downloads are from
+            external links. All the images used are for reprentation purpose only.
+        </h5>
+    </marquee>
+
+    <!-- GAME -->
+    <h1 class="title">Fifa 23</h1>
+    <div class="game">
+        <a href="https://www.apunkasoftware.net/vlink/02051544041">
+            <img
+                src="https://assets.altarofgaming.com/wp-content/uploads/2023/03/fifa-23-game-poster-altar-of-gaming-725x1024.jpg">
+        </a>
+
+        <div class="game-text">
+            FIFA 23 is a football simulation game released by
+            Electronic Arts on September 30, 2022, marking the 30th and final installment in the EA Sports FIFA series.
+            It features HyperMotion2 technology for enhanced, realistic gameplay, introduces women’s club football, and
+            includes both men’s and women’s World Cup modes.
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">WWE 2K25</h1>
+    <div class="game">
+        <a href="https://www.apunkasoftware.net/vlink/02113746542">
+            <img src="https://www.kupywrestlingwallpapers.info/wallpapers/2024/roman-reigns-wwe-2k25.jpg">
+        </a>
+
+        <div class="game-text">
+            Released in March 2025,
+            WWE 2K25 on Steam on PC is a premier wrestling simulation featuring over 300 superstars, enhanced gameplay
+            with returning "Chain Wrestling," and new "Underground" MMA-style matches. It highlights "The Bloodline"
+            dynasty in Showcase mode, introduces intergender matches, and features online multiplayer in MyGM on the WWE
+            2K website.
+
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">EA Sports Cricket 2002 </h1>
+    <div class="game">
+        <a href="https://thefileslocker.net/52cfb595tu1v.html">
+            <img
+                src="https://assets-prd.ignimgs.com/2023/10/07/cricket02-1696702445238.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80">
+        </a>
+
+        <div class="game-text">
+            EA Sports Cricket 2002
+            is a classic simulation game released for PC and PS2, beloved for its intuitive batting/bowling controls,,
+            iconic intro, and, detailed gameplay including Test matches and World Cup tournaments. Featuring 10
+            international teams, it allows players to experience, realistic match conditions, where weather and pitch
+            influence, ball movement
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Pro Evolution Soccer 2019</h1>
+    <div class="game">
+        <a href="https://www.apunkasoftware.net/vlink/02111546520">
+            <img
+                src="https://m.media-amazon.com/images/M/MV5BNGNiNTAwZDItYTA4NS00MTJjLWJhMzQtOWI1ZWU5NDAwZTU0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+        </a>
+
+        <div class="game-text">
+            Pro Evolution Soccer 2019 (PES 2019) is
+            a 2018 football simulation game by Konami, celebrated for its realistic gameplay, improved ball physics, and
+            "The Power of Football" theme. It features enhanced visual fidelity with 4K HDR, increased player
+            individuality, and visible fatigue, focusing on a refined on-pitch experience rather than extensive
+            licensing.
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">3D Pool: Billiards and Snooker</h1>
+    <div class="game">
+        <a href="https://thefileslocker.net/575cz5icac2j.html">
+            <img src="https://e.snmc.io/lk/fv/x/7c5294f02faad0a1161db87f279a3a92/6793127">
+        </a>
+
+        <div class="game-text">
+            3D Pool: Billiards and Snooker (or Remastered) is
+            a simulation game offering realistic 3D table sports, including 8-ball, 9-ball, 10-ball, and snooker. It
+            features single-player against AI, local multiplayer for two players, and multiple difficulty levels with
+            customisable ball and cue skins, providing an arcade-like pool hall experience at home..
+
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Franchise Hockey Manager 8</h1>
+    <div class="game">
+        <a href="https://thefileslocker.net/ydozs5upgj7l.html">
+            <img
+                src="https://cdn2.unrealengine.com/egs-franchisehockeymanager8-outoftheparkdevelopments-g1a-01-1920x1080-88adb0335121.jpg?resize=1&w=480&h=270&quality=medium">
+        </a>
+
+        <div class="game-text">
+            Franchise Hockey Manager 8
+            is a detailed text-based sports management simulation released in Oct 2021 by Out of the Park Developments.
+            It allows players to manage teams globally, featuring NHL licensing, deep financial management, historical
+            play from 1917, and updated 2D game simulation.
+
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Forza Horizon 5</h1>
+    <div class="game">
+        <a href="https://www.apunkasoftware.net/vlink/02061044631">
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Forza_Horizon_5_cover_art.jpg">
+        </a>
+
+        <div class="game-text">
+            Forza Horizon 5 is
+            an open-world arcade racing game set in a vibrant, diverse recreation of Mexico. Featuring hundreds of
+            customizable cars, it focuses on exploration, high-speed racing, and stunts across varied landscapes like
+            jungles, deserts, and cities. It offers a fun, accessible driving experience with dynamic weather and, in
+            some versions, advanced haptic feedback.
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <h2><a href="https://www.instagram.com/iamshourya_kanha">Click Here to Know About Developer</h2></a>
+        <p>Hey! it's me, Shourya or Pytha baba😅. I literally took 2 months to build this site. So please give me a
+            feedback about it, and yes, this site is under programming, so not all games could be included. So suggest
+            any game you like me to add here.</p>
+        <p>© 2026 Cadencea I India</p>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
