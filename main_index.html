@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cadencea</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: #121212;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(180deg, #000, #252525);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid rgb(255, 115, 0);
+        }
+
+        .logo {
+            font-family: 'Orbitron';
+            font-size: 8vw;
+            letter-spacing: 6px;
+            margin: 0;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        /* 🔥 HOVER ANIMATION BACK */
+        .logo:hover {
+            transform: scale(1.1);
+            text-shadow: 0 0 20px white, 0 0 40px white;
+        }
+
+        .header h3 {
+            color: #ff4d4d;
+            letter-spacing: 2px;
+        }
+
+        /* GAME CARD */
+        .game {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px;
+            align-items: center;
+        }
+
+        .game img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            border: 2px solid #333;
+            transition: 0.3s;
+        }
+
+        /* 🔥 RED GLOW EFFECT BACK */
+        .game img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgb(255, 115, 0), 0 0 40px rgb(255, 115, 0);
+        }
+
+        .game-text {
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .title {
+            color: rgb(255, 115, 0);
+            font-family: 'Orbitron';
+            margin-left: 30px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* MOBILE FIX */
+        @media (max-width: 768px) {
+            .game {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                text-align: center;
+                margin-left: 0;
+            }
+
+            /* Disable hover scaling on mobile (prevents glitch) */
+            .logo:hover,
+            .game img:hover {
+                transform: none;
+                box-shadow: none;
+                text-shadow: none;
+            }
+        }
+
+        /* POPUP */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .popup-content {
+            background: #1e2a38;
+            padding: 20px;
+            margin: 30% auto;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: cyan;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- POPUP -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Welcome User👋</h2>
+            <p>Welcome to Cadencea! Plese give your feedback to me in insta...</p>
+            <button onclick="closePopup()">Thanks❤</button>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1 class="logo">CADENCEA</h1>
+        <h3>NEW ERA OF GAMES</h3>
+    </div>
+    <marquee style="background: #1a1a1a; padding: 12px 0; border-bottom: 1px solid #333;">
+        <h5 style="color:#b0b0b0; margin:0; font-weight: normal;">
+            Please note that Cadencea and its members don't support any illegal file downloads. All downloads are from
+            external links.
+        </h5>
+    </marquee>
+
+    <!-- GAME -->
+    <h1 class="title">Action/Adventure🤖</h1>
+    <div class="game">
+        <a
+            href="https://shourya-sinha6754.github.io/cadencea-action-games/">
+            <img src="https://wallpaper-house.com/data/out/11/wallpaper2you_469850.jpg">
+        </a>
+
+        <div class="game-text">
+            Ready to test your limits? You’ve just landed in the ultimate hub for 
+            high-stakes gameplay. We’ve curated a lineup of full-throttle action games 
+            designed to keep your heart racing and your fingers moving. No filler, no 
+            delays—just straight-up excitement from start to finish. Your library is 
+            loaded and ready for launch. Pick your weapon, hit start, and enjoy the 
+            games!
+            <br><br>
+            <b style="color:red;">Tap image to redirect</b>
+        </div>
+    </div>
+    <h1 class="title">Horror/Puzzle👻</h1>
+    <div class="game">
+        <a
+            href="https://oceansofgamess.com/red-dead-redemption-2-v1491-50-free-download/">
+            <img src="https://www.ox.ac.uk/sites/files/oxford/field/field_image_main/GettyImages-1281424127.jpg">
+        </a>
+
+        <div class="game-text">
+            Don’t look back. You’ve just entered the ultimate collection of terror. Whether 
+            you’re escaping a haunted asylum or surviving a relentless slasher, these games 
+            are designed to keep you on the edge of your seat. We’ve handpicked the scariest 
+            full-length experiences just for you. Take a deep breath, hit play, and enjoy 
+            the chills. We hope you aren't afraid of the dark.
+            <br><br>
+            <b style="color:red;">Tap image to redirect</b>
+        </div>
+    </div>
+    <h1 class="title">Racing🐎</h1>
+    <div class="game">
+        <a href="https://oceantogames.com/gta-san-andreas-download-download-link/">
+            <img src="https://windows10spotlight.com/wp-content/uploads/2016/12/6a9a463114e92511d0a4931f85522d70.jpg">
+        </a>
+
+        <div class="game-text">
+           Ready to take the checkered flag? This is your one-stop destination for the most 
+           immersive racing experiences ever made. We’ve curated a lineup of full-speed games 
+           designed to test your reflexes and your nerve. No pit stops, no delays—just straight-up 
+           velocity from start to finish. Your garage is open and the track is clear. Ignite your 
+           engine and enjoy the race!
+            <br><br>
+            <b style="color:red;">Tap image to redirect</b>
+        </div>
+    </div>
+    <h1 class="title">Sports⚽</h1>
+    <div class="game">
+        <a href="https://oceantogames.com/mafia-ii-complete-free-download/">
+            <img
+                src="https://rukminim2.flixcart.com/image/480/480/poster/b/m/k/athah-lets-play-football-poster-athphme445-medium-original-imae8f9py82nvvfd.jpeg?q=90">
+        </a>
+
+        <div class="game-text">
+           The crowd is roaring and the clock is ticking. You’ve just landed in the ultimate hub for 
+           competitive gameplay. From the green grass of the stadium to the hardwood of the court, we’ve 
+           gathered every major league experience in one place. No bench-warming here—only MVP performances. 
+           Your library of top-tier sports games is ready for kickoff. Take the lead and enjoy the win!
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    
+
+    <!-- FOOTER -->
+    <footer>
+        <h2><a href="https://www.instagram.com/iamshourya_kanha">About Developer</h2></a>
+        <p>Hey! it's me, Shourya or Pytha baba😅. I literally took 2 months to build this site. So please give me a
+            feedback about it, and yes, this site is under programming, so not all games could be included. So suggest
+            any game you like me to add here.</p>
+        <p>© 2026 Cadencea I India</p>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
