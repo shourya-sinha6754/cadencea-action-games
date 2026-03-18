@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cadencea</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT -->
+    <link rel="icon" type="image/png"
+        href="https://freepngdesign.com/content/uploads/images/banana-style-letter-c-4363.png" sizes="96x96">
+
+    <style>
+        body {
+            margin: 0;
+            background: #121212;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(180deg, #000, #252525);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid red;
+        }
+
+        .logo {
+            font-family: 'Orbitron';
+            font-size: 8vw;
+            letter-spacing: 6px;
+            margin: 0;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        /* 🔥 HOVER ANIMATION BACK */
+        .logo:hover {
+            transform: scale(1.1);
+            text-shadow: 0 0 20px white, 0 0 40px white;
+        }
+
+        .header h3 {
+            color: #ff4d4d;
+            letter-spacing: 2px;
+        }
+
+        /* GAME CARD */
+        .game {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px;
+            align-items: center;
+        }
+
+        .game img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            border: 2px solid #333;
+            transition: 0.3s;
+        }
+
+        /* 🔥 RED GLOW EFFECT BACK */
+        .game img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px red, 0 0 40px red;
+        }
+
+        .game-text {
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .title {
+            color: red;
+            font-family: 'Orbitron';
+            margin-left: 30px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* MOBILE FIX */
+        @media (max-width: 768px) {
+            .game {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                text-align: center;
+                margin-left: 0;
+            }
+
+            /* Disable hover scaling on mobile (prevents glitch) */
+            .logo:hover,
+            .game img:hover {
+                transform: none;
+                box-shadow: none;
+                text-shadow: none;
+            }
+        }
+
+        /* POPUP */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .popup-content {
+            background: #1e2a38;
+            padding: 20px;
+            margin: 30% auto;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: cyan;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1 class="logo">CADENCEA</h1>
+        <h3>NEW ERA OF GAMES</h3>
+    </div>
+    <marquee style="background: #1a1a1a; padding: 12px 0; border-bottom: 1px solid #333;">
+        <h5 style="color:#b0b0b0; margin:0; font-weight: normal;">
+            Please note that Cadencea and its members don't support any illegal file downloads. All downloads are from
+            external links.
+        </h5>
+    </marquee>
+
+    <!-- GAME -->
+    <h1 class="title">The Last Of Us</h1>
+    <div class="game">
+        <a href="https://oceantogames.com/the-last-us-download-for-pc-windows-56-20379/">
+            <img src="https://onthewall.co.uk/cdn/shop/files/pp34971.jpg?v=1740171557">
+        </a>
+
+        <div class="game-text">
+            The Last of Us is a critically acclaimed post-apocalyptic action-adventure franchise
+            created by Naughty Dog. It follows Joel, a hardened smuggler, escorting Ellie, a teenage
+            girl immune to a fungal infection, across a collapsed United States. Known for emotional
+            storytelling, the series spans games and a TV show focusing on survival, morality, and
+            love.
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Resident Evil 4</h1>
+    <div class="game">
+        <a href="https://oceantogames.com/resident-evil-4-download-pc-full-version-2014-2/">
+            <img
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0cd47e73-13d0-4574-99e7-6989ec6ac3fc/dg674qi-75eaf74d-81af-4d4f-a820-68b093f56a3d.png/v1/fill/w_1280,h_1815,q_80,strp/resident_evil_4__2005____poster_by_thepatchedvest_dg674qi-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTgxNSIsInBhdGgiOiIvZi8wY2Q0N2U3My0xM2QwLTQ1NzQtOTllNy02OTg5ZWM2YWMzZmMvZGc2NzRxaS03NWVhZjc0ZC04MWFmLTRkNGYtYTgyMC02OGIwOTNmNTZhM2QucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.GR74pMaFR0v8bEoAGNzCxy6usO2FWFcq4JHiY7_czuk">
+        </a>
+
+        <div class="game-text">
+            Resident Evil 4 is a seminal 2005 third-person survival horror game (remade in 2023) where
+            agent Leon S. Kennedy rescues the US President's daughter from a Spanish cult. It redefined
+            the series with intense action, over-the-shoulder shooting, and resource management, focusing
+            on fighting parasite-infected villagers rather than traditional zombies.
+
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Phasmophobia</h1>
+    <div class="game">
+        <a href="https://oceantogames.com/phasmophobia-free-download/">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/dcce58143237583.627b0756215f1.jpg">
+        </a>
+
+        <div class="game-text">
+            Phasmophobia is a 4-player co-op psychological horror game where players act as ghost hunters
+            investigating paranormal activity in haunted locations. Using specialized equipment (EMF readers,
+            spirit boxes, cameras), players gather evidence to identify the ghost type while managing their
+            sanity to avoid attacks in an immersive, voice-responsive environment.
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Evil Nun: The Broken Mask</h1>
+    <div class="game">
+        <a href="https://oceantogames.com/evil-nun-broken-mask-good-bad-kid-early-access-free-download/">
+            <img src="https://meridiem-games.com/backoffice/public/uploads/games/cWDckN.jpg">
+        </a>
+
+        <div class="game-text">
+            Evil Nun
+            is a popular first-person survival horror game where players must escape a dilapidated school guarded by
+            Sister Madeline, a terrifying nun who can hear every movement. Players explore, solve puzzles, and hide,
+            often while gathering mask pieces, to escape while facing jump scares and a tense atmosphere, commonly
+            available on Android, PC, and Steam.
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Fears To Phantom</h1>
+    <div class="game">
+        <a
+            href="https://www.mediafire.com/file_premium/hnibqtkediyypnw/Fears_to_Fathom_-_Ironbark_Lookout_%2528Www.ApunKaGames.Com%2529.rar/file">
+            <img
+                src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2506160/capsule_616x353.jpg?t=1761626826">
+        </a>
+
+        <div class="game-text">
+            Fears to Fathom
+            is an episodic psychological horror game series where players experience interactive, short stories based on
+            the real-life accounts of survivors. Developed by Rayll, it focuses on building intense atmosphere,
+            suspense, and paranoia over traditional jump scares, often using a VHS-style aesthetic to enhance the
+            unsettling, grounded feel.
+
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Screming In The Basement</h1>
+    <div class="game">
+        <a href="https://www.akglinks.com/vlink/03025348401">
+            <img
+                src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3441360/78314bd9692a7cdded6e9ea2008fd43d1d777990/capsule_616x353.jpg?t=1773576737">
+        </a>
+
+        <div class="game-text">
+            Screaming In The Basement
+            (2025) is a first-person psychological horror game developed by Massbolt Games. Players take on the role of
+            an investigative reporter named Mike, exploring a terrifying, realistic, and story-rich environment in a
+            "walking simulator" format. It focuses on atmospheric tension, exploring a dark, curse-laden story of a
+            tragic family murder.
+
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Resident Evil 2</h1>
+    <div class="game">
+        <a href="https://thefileslocker.net/h86izj4qydbj.html">
+            <img src="https://i.pinimg.com/736x/c4/a9/28/c4a928f1a47b474d319a52c10bbc5382.jpg">
+        </a>
+
+        <div class="game-text">
+            Resident Evil 2 (2019) is a critically acclaimed survival horror remake of the 1998 classic, focusing on
+            Leon S. Kennedy and Claire Redfield attempting to escape a zombie-infested Raccoon City. Players navigate
+            the Raccoon Police Department and surrounding areas, solving puzzles and managing limited ammunition,
+            featuring an over-the-shoulder view, modern graphics, and intense atmospheric horror.
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <h2><a href="https://www.instagram.com/iamshourya_kanha">About Developer</h2></a>
+        <p>Hey! it's me, Shourya or Pytha baba😅. I literally took 2 months to build this site. So please give me a
+            feedback about it, and yes, this site is under programming, so not all games could be included. So suggest
+            any game you like me to add here.</p>
+        <p>© 2026 Cadencea I India</p>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
