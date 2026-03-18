@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cadencea</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: #121212;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(180deg, #000, #252525);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid red;
+        }
+
+        .logo {
+            font-family: 'Orbitron';
+            font-size: 8vw;
+            letter-spacing: 6px;
+            margin: 0;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        /* 🔥 HOVER ANIMATION BACK */
+        .logo:hover {
+            transform: scale(1.1);
+            text-shadow: 0 0 20px white, 0 0 40px white;
+        }
+
+        .header h3 {
+            color: #ff4d4d;
+            letter-spacing: 2px;
+        }
+
+        /* GAME CARD */
+        .game {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px;
+            align-items: center;
+        }
+
+        .game img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            border: 2px solid #333;
+            transition: 0.3s;
+        }
+
+        /* 🔥 RED GLOW EFFECT BACK */
+        .game img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px red, 0 0 40px red;
+        }
+
+        .game-text {
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .title {
+            color: red;
+            font-family: 'Orbitron';
+            margin-left: 30px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* MOBILE FIX */
+        @media (max-width: 768px) {
+            .game {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                text-align: center;
+                margin-left: 0;
+            }
+
+            /* Disable hover scaling on mobile (prevents glitch) */
+            .logo:hover,
+            .game img:hover {
+                transform: none;
+                box-shadow: none;
+                text-shadow: none;
+            }
+        }
+
+        /* POPUP */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .popup-content {
+            background: #1e2a38;
+            padding: 20px;
+            margin: 30% auto;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: cyan;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- POPUP -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Welcome User👋</h2>
+            <p>Welcome to Cadencea! Plese give you feedback to me in insta...</p>
+            <button onclick="closePopup()">Thanks❤</button>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1 class="logo">CADENCEA</h1>
+        <h3>NEW ERA OF GAMES</h3>
+    </div>
+    <marquee style="background: #1a1a1a; padding: 12px 0; border-bottom: 1px solid #333;">
+        <h5 style="color:#b0b0b0; margin:0; font-weight: normal;">
+            Please note that Cadencea and its members don't support any illegal file downloads. All downloads are from
+            external links.
+        </h5>
+    </marquee>
+
+    <!-- GAME -->
+    <h1 class="title">GTA V (PC)</h1>
+    <div class="game">
+        <a
+            href="https://148-251-7-87.top/Oceanofgames.com/Grand_Theft_Auto_V_GTA_5_RELOADED.zip?md5=ZJeWVQDAoqtD1Cx7xEHjhA&expires=1776405911">
+            <img src="https://m.media-amazon.com/images/I/71UUdPcdR7L._AC_UF894,1000_QL80_.jpg">
+        </a>
+
+        <div class="game-text">
+            Grand Theft Auto V (GTA 5) is a critically acclaimed 2013
+            action-adventure game by Rockstar Games set in the open-world
+            state of San Andreas, including Los Santos. It follows three
+            main characters—Michael, Franklin, and Trevor—as they
+            execute heists under pressure from criminal elements and
+            the government.
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Red Dead Redemption 2</h1>
+    <div class="game">
+        <a
+            href="https://138-201-124-88.top/Oceanofgames.com/Red_Dead_Redemption_2_v1491_50.zip?md5=1FLbansLIeuOWpjw66xq8A&expires=1776406632">
+            <img src="https://mrpcgamer.net/wp-content/uploads/2024/05/Red_Dead_Redemption_2_main_jpg.webp">
+        </a>
+
+        <div class="game-text">
+            Red Dead Redemption 2
+            (RDR2) is a critically acclaimed 2018 action-adventure
+            game developed by Rockstar Games, set in a hyper-realistic
+            1899 American Wild West. Players control outlaw Arthur Morgan,
+            navigating the decline of the Wild West era while dealing
+            with internal gang loyalty and external pressures from
+            lawmen, says Fandom.
+
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Grand Theft Auto San Andreas</h1>
+    <div class="game">
+        <a href="https://136-243-56-48.top/Oceanofgames.com/GT.zip?md5=GhBkCXrgHJSUDTQy2ztACw&expires=1776407444">
+            <img src="https://posterwa.com/cdn/shop/files/GAMES8_88fee65b-3c95-4b4d-accc-1b098cfbb2ad.jpg?v=1713855915">
+        </a>
+
+        <div class="game-text">
+            Grand Theft Auto: San Andreas (2004) is a seminal open-world action-adventure
+            game by Rockstar Games, set in a fictionalized 1992 California. Players control
+            Carl "CJ" Johnson, who returns to Los Santos after his mother's murder, striving
+            to rebuild his gang, battle corrupt police, and navigate organized crime
+            across three cities.
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Mafia II</h1>
+    <div class="game">
+        <a href="https://159-69-66-31.top/Oceanofgames.com/Mafia_II.zip?md5=1POQS4USlt3FhZnyw9OKMw&expires=1776407869">
+            <img
+                src="https://gaming-cdn.com/images/products/6970/orig/mafia-definitive-edition-definitive-edition-pc-game-steam-europe-cover.jpg?v=1704899872">
+        </a>
+
+        <div class="game-text">
+            Mafia II
+            is a narrative-driven, third-person action-adventure game
+            set in the 1940s-50s in fictional Empire Bay, focusing on
+            Vito Scaletta’s rise through the mob. Known for its
+            atmospheric, cinematic story similar to "Goodfellas," the
+            game combines cover-based shooting and driving, with a
+            remastered Definitive Edition available
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Minecraft Legends</h1>
+    <div class="game">
+        <a
+            href="https://94-130-130-211.top/Oceanofgames.com/Minecraft_Legends_v1_18_14350.zip?md5=Ek14FTPalUHSb853vyanww&expires=1776408510">
+            <img
+                src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70070000015808/85cfbe0c923e4b43f11c1c59dcfa97aeeb94dc7eb64491da1f3c3cdce8e5d988">
+        </a>
+
+        <div class="game-text">
+            Minecraft Legends is an action-strategy game (2023) by Mojang
+            Studios and Blackbird Interactive, where you unite the Overworld
+            to defend against a Piglin invasion. Players explore, build
+            defenses, and command armies of mobs in real-time battles
+            to destroy Piglin bases. It features campaign, co-op, and
+            4v4 PvP modes.
+
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">God OF War</h1>
+    <div class="game">
+        <a
+            href="https://159-69-66-31.top/Oceanofgames.com/god_of_war.zip?md5=KTo1lCOZtdoTr0ZWXkU9jg&expires=1776408200">
+            <img src="https://m.media-amazon.com/images/I/71v6kczDs4L._AC_UF894,1000_QL80_.jpg">
+        </a>
+
+        <div class="game-text">
+            God of War is a renowned action-adventure franchise centered on
+            Kratos, a Spartan warrior who, after being tricked into killing
+            his family, rebels against the Olympian gods. Developed by Santa
+            Monica Studio, the series features brutal combat, traversing from
+            Greek mythology, where Kratos becomes the new God of War, to
+            Norse mythology in the 2018 reboot.
+
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+    <h1 class="title">Poppy Playtime Chapter 2</h1>
+    <div class="game">
+        <a
+            href="https://94-130-130-211.top/Oceanofgames.com/Poppy_Playtime_Chapter_2_v20230620_GoldBerg.zip?md5=OlegnnIOzfOkWIJarstU7g&expires=1776408965">
+            <img
+                src="https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000078463/915dbdeee317f55c0fc7ddbd36083794fce2852a5825d999ccea0e91d8c44306">
+        </a>
+
+        <div class="game-text">
+            Poppy Playtime - Chapter 2: Fly in a Web
+            is a first-person horror-puzzle game where
+            you descend deeper into the abandoned Playtime Co.
+            factory. As an ex-employee, you must escape the
+            clutches of a new, vengeful antagonist named Mommy
+            Long Legs by playing deadly games—Musical Memory,
+            Wack-a-Wuggy, and Statues—using an upgraded GrabPack
+            with green hand capabilities.
+            <br><br>
+            <b style="color:red;">Tap image to download</b>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <h2><a href="https://www.instagram.com/iamshourya_kanha">About Developer</h2></a>
+        <p>Hey! it's me, Shourya or Pytha baba😅. I literally took 2 months to build this site. So please give me a
+            feedback about it, and yes, this site is under programming, so not all games could be included. So suggest
+            any game you like me to add here.</p>
+        <p>© 2026 Cadencea I India</p>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
