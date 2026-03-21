@@ -6,45 +6,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FONT -->
-    <link rel="icon" type="image/png" href="https://freepngdesign.com/content/uploads/images/banana-style-letter-c-4363.png" sizes="96x96">
-    
+    <!-- ICON -->
+    <link rel="icon" type="image/png" href="https://freepngdesign.com/content/uploads/images/banana-style-letter-c-4363.png">
 
     <style>
         body {
             margin: 0;
-            background: #121212;
+            background: radial-gradient(circle at top, #111827, #0B0F1A);
             font-family: sans-serif;
-            color: white;
+            color: #E5E7EB;
         }
 
         /* HEADER */
         .header {
-            background: linear-gradient(180deg, #000, #252525);
+            background: linear-gradient(180deg, #0B0F1A, #111827);
             padding: 40px 20px;
             text-align: center;
-            border-bottom: 4px solid rgb(255, 115, 0);
+            border-bottom: 2px solid #1F2937;
         }
 
         .logo {
-            font-family: 'Orbitron';
+            font-family:Orbitron ;
             font-size: 8vw;
             letter-spacing: 6px;
             margin: 0;
             transition: 0.3s;
             display: inline-block;
+            color: #E5E7EB;
+            text-shadow: 0 0 25px #8B5CF6;
         }
 
-        /* 🔥 HOVER ANIMATION BACK */
         .logo:hover {
             transform: scale(1.1);
-            text-shadow: 0 0 20px white, 0 0 40px white;
+            text-shadow: 0 0 40px #8B5CF6, 0 0 10px #22D3EE;
         }
 
         .header h3 {
-            color: #ff4d4d;
+            color: #F43F5E;
             letter-spacing: 2px;
         }
+
+        /* NOTICE BAR */
+        marquee {
+            background: #111827;
+            padding: 12px 0;
+            border-bottom: 1px solid #1F2937;
+        }
+
+        marquee h5 {
+            color: #9CA3AF;
+            margin: 0;
+        }
+
+        #Header_discription{
+            font-family:cursive;
+            text-decoration: line-through;
+
+        }
+
+
+        /* SECTION TITLES */
+        .title {
+            font-family: sans-serif;
+            margin-left: 30px;
+        }
+
+        .action { color: #22D3EE; }
+        .horror { color: #F43F5E; }
+        .racing { color: #4ADE80; }
+        .sports { color: #8B5CF6; }
 
         /* GAME CARD */
         .game {
@@ -53,60 +83,58 @@
             gap: 20px;
             padding: 30px;
             align-items: center;
+            background: #111827;
+            margin: 20px;
+            border-radius: 12px;
+            border: 1px solid #1F2937;
+            transition: 0.3s;
+        }
+
+        .game:hover {
+            transform: scale(1.02);
+            border-color: #8B5CF6;
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.5);
         }
 
         .game img {
             width: 100%;
             max-width: 300px;
             border-radius: 10px;
-            border: 2px solid #333;
+            border: 2px solid #1F2937;
             transition: 0.3s;
         }
 
-        /* 🔥 RED GLOW EFFECT BACK */
         .game img:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px rgb(255, 115, 0), 0 0 40px rgb(255, 115, 0);
+            box-shadow: 0 0 20px #22D3EE;
         }
 
         .game-text {
             flex: 1;
             font-size: 16px;
             line-height: 1.6;
+            color: #9CA3AF;
         }
 
-        .title {
-            color: rgb(255, 115, 0);
-            font-family: 'Orbitron';
-            margin-left: 30px;
+        .redirect {
+            color: #F43F5E;
         }
 
         /* FOOTER */
         footer {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background: #0B0F1A;
             text-align: center;
             padding: 30px;
+            border-top: 1px solid #1F2937;
         }
 
-        /* MOBILE FIX */
-        @media (max-width: 768px) {
-            .game {
-                flex-direction: column;
-                text-align: center;
-            }
+        footer a {
+            color: #22D3EE;
+            text-decoration: none;
+        }
 
-            .title {
-                text-align: center;
-                margin-left: 0;
-            }
-
-            /* Disable hover scaling on mobile (prevents glitch) */
-            .logo:hover,
-            .game img:hover {
-                transform: none;
-                box-shadow: none;
-                text-shadow: none;
-            }
+        footer a:hover {
+            text-shadow: 0 0 10px #22D3EE;
         }
 
         /* POPUP */
@@ -121,14 +149,29 @@
         }
 
         .popup-content {
-            background: #1e2a38;
+            background: #111827;
             padding: 20px;
-            margin: 30% auto;
+            margin: 20% auto;
             width: 80%;
             max-width: 300px;
             text-align: center;
             border-radius: 10px;
+            border: 1px solid #1F2937;
             animation: fadeIn 0.5s ease;
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #8B5CF6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .popup button:hover {
+            box-shadow: 0 0 10px #8B5CF6;
         }
 
         @keyframes fadeIn {
@@ -136,20 +179,32 @@
                 opacity: 0;
                 transform: translateY(-20px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        .popup button {
-            margin-top: 10px;
-            padding: 8px 15px;
-            background: cyan;
-            border: none;
-            cursor: pointer;
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .game {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                text-align: center;
+                margin-left: 0;
+            }
+
+            .logo:hover,
+            .game img:hover {
+                transform: none;
+                box-shadow: none;
+                text-shadow: none;
+            }
         }
+        
     </style>
 </head>
 
@@ -159,100 +214,81 @@
     <div class="popup" id="popup">
         <div class="popup-content">
             <h2>Hey! it's me, Shourya Sinha</h2>
-            <p>Welcome to Cadencea! Plese give your feedback to me...</p>
-            <button onclick="closePopup()">Thanks❤</button>
+            <p>Welcome to Cadencea! Please give your feedback...</p>
+            <button onclick="closePopup()">Thanks ❤</button>
         </div>
     </div>
 
     <!-- HEADER -->
     <div class="header">
         <h1 class="logo">CADENCEA</h1>
-        <h3>NEW ERA OF GAMES</h3>
+        <h3 id="Header_discription">NEW ERA OF GAMES</h3>
     </div>
-    <marquee style="background: #1a1a1a; padding: 12px 0; border-bottom: 1px solid #333;">
-        <h5 style="color:#b0b0b0; margin:0; font-weight: normal;">
-            Please note that Cadencea and its members don't support any illegal file downloads. All downloads are from
-            external links. All the images used are for reprentation purpose only.
-        </h5>
-    </marquee>
 
-    <!-- GAME -->
-    <h1 class="title">Action/Adventure🤖</h1>
+    <marquee>
+        <h5>
+            Please note that Cadencea doesn't support illegal downloads. All links are external.All the images are used for Representation purpose only!!!
+        </h5>
+    </marquee><br><br><center><input type="text" id="searchBox" onkeyup="showSuggestions()" placeholder="please use small letters only"><div id="suggestions"></div>
+<button id="searchBtn" onclick="goToContent()">Search</button></center>
+    <!-- ACTION -->
+    <h1 id="action" class="title action">Action/Adventure 🤖</h1>
     <div class="game">
-        <a
-            href="https://shourya-sinha6754.github.io/Cadencea/action-game.html">
+        <a href="https://shourya-sinha6754.github.io/Cadencea/action-game.html">
             <img src="https://wallpaper-house.com/data/out/11/wallpaper2you_469850.jpg">
         </a>
 
         <div class="game-text">
-            Ready to test your limits? You’ve just landed in the ultimate hub for 
-            high-stakes gameplay. We’ve curated a lineup of full-throttle action games 
-            designed to keep your heart racing and your fingers moving. No filler, no 
-            delays—just straight-up excitement from start to finish. Your library is 
-            loaded and ready for launch. Pick your weapon, hit start, and enjoy the 
-            games!
+            Ready to test your limits? You've just landed in the ultimate hub for high-stakes gameplay...
             <br><br>
-            <b style="color:red;">Tap image to redirect</b>
+            <b class="redirect">Tap image to redirect</b>
         </div>
     </div>
-    <h1 class="title">Horror/Puzzle👻</h1>
+
+    <!-- HORROR -->
+    <h1 id="horror" class="title horror">Horror/Puzzle 👻</h1>
     <div class="game">
-        <a
-            href="https://shourya-sinha6754.github.io/Cadencea/horror-games.html">
+        <a href="https://shourya-sinha6754.github.io/Cadencea/horror-games.html">
             <img src="https://www.ox.ac.uk/sites/files/oxford/field/field_image_main/GettyImages-1281424127.jpg">
         </a>
 
         <div class="game-text">
-            Don’t look back. You’ve just entered the ultimate collection of terror. Whether 
-            you’re escaping a haunted asylum or surviving a relentless slasher, these games 
-            are designed to keep you on the edge of your seat. We’ve handpicked the scariest 
-            full-length experiences just for you. Take a deep breath, hit play, and enjoy 
-            the chills. We hope you aren't afraid of the dark.
+            Don’t look back. You've entered the ultimate collection of terror...
             <br><br>
-            <b style="color:red;">Tap image to redirect</b>
+            <b class="redirect">Tap image to redirect</b>
         </div>
     </div>
-    <h1 class="title">Racing🐎</h1>
+
+    <!-- RACING -->
+    <h1 id="racing" class="title racing">Racing 🏎️</h1>
     <div class="game">
         <a href="https://shourya-sinha6754.github.io/Cadencea/racing.html">
             <img src="https://windows10spotlight.com/wp-content/uploads/2016/12/6a9a463114e92511d0a4931f85522d70.jpg">
         </a>
 
         <div class="game-text">
-           Ready to take the checkered flag? This is your one-stop destination for the most 
-           immersive racing experiences ever made. We’ve curated a lineup of full-speed games 
-           designed to test your reflexes and your nerve. No pit stops, no delays—just straight-up 
-           velocity from start to finish. Your garage is open and the track is clear. Ignite your 
-           engine and enjoy the race!
+            Ready to take the checkered flag? Experience full-speed gameplay...
             <br><br>
-            <b style="color:red;">Tap image to redirect</b>
+            <b class="redirect">Tap image to redirect</b>
         </div>
     </div>
-    <h1 class="title">Sports⚽</h1>
+
+    <!-- SPORTS -->
+    <h1 id="sports" class="title sports">Sports ⚽</h1>
     <div class="game">
         <a href="https://shourya-sinha6754.github.io/Cadencea/sports.html">
-            <img
-                src="https://rukminim2.flixcart.com/image/480/480/poster/b/m/k/athah-lets-play-football-poster-athphme445-medium-original-imae8f9py82nvvfd.jpeg?q=90">
+            <img src="https://rukminim2.flixcart.com/image/480/480/poster/b/m/k/athah-lets-play-football-poster-athphme445-medium-original-imae8f9py82nvvfd.jpeg?q=90">
         </a>
 
         <div class="game-text">
-           The crowd is roaring and the clock is ticking. You’ve just landed in the ultimate hub for 
-           competitive gameplay. From the green grass of the stadium to the hardwood of the court, we’ve 
-           gathered every major league experience in one place. No bench-warming here—only MVP performances. 
-           Your library of top-tier sports games is ready for kickoff. Take the lead and enjoy the win!
+            The crowd is roaring and the clock is ticking...
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to redirect</b>
         </div>
-    
+    </div>
 
     <!-- FOOTER -->
-    <footer>
-        <h2><a href="https://www.instagram.com/iamshourya_kanha">Click Here to Know About Developer</h2></a>
-        <p>Hey! it's me, Shourya or Pytha baba😅. I literally took 2 months to build this site. So please give me a
-            feedback about it, and yes, this site is under programming, so not all games could be included. So suggest
-            any game you like me to add here.</p>
-        <p>© 2026 Cadencea I India</p>
-    </footer>
+    
 
     <script>
         window.onload = function () {
@@ -263,7 +299,117 @@
             document.getElementById("popup").style.display = "none";
         }
     </script>
+<script>
+function goToContent() {
+  let input = document.getElementById("searchBox").value.trim();
 
-</body>
+  let element = document.getElementById(input);
 
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+</script>
+<style>
+#searchBtn {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin-left: 10px;
+  background: transparent;
+  color: #00f7ff;
+  border: 2px solid #00f7ff;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 1px #00f7ff;
+  transition: 0.3s;
+}
+
+#searchBtn:hover {
+  background: #00f7ff;
+  color: #020617;
+  box-shadow: 0 0 20px #00f7ff;
+}
+#suggestions {
+  position: absolute;
+  left: 46%;
+  transform: translateX(-50%);
+  width: 240px;
+  background: #020617;
+  border: 1px solid #00f7ff;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  color: #00f7ff;
+}
+
+.suggestion-item:hover {
+  background: #00f7ff;
+  color: #020617;
+}
+#searchBox {
+  padding: 12px;
+  width: 240px;
+  font-size: 16px;
+  background: #020617;
+  color: #00f7ff;
+  border: 2px solid #00f7ff;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 0 1px #00f7ff;
+  transition: 0.3s;
+}
+
+#searchBox::placeholder {
+  color: #00f7ff88;
+}
+
+#searchBox:focus {
+  box-shadow: 0 0 15px #00f7ff, 0 0 25px #00f7ff;
+}
+footer {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            text-align: center;
+            padding: 30px;
+        }
+
+</style>
+<script>
+const data = ["action", "horror", "racing", "sports"];
+
+function showSuggestions() {
+  let input = document.getElementById("searchBox").value.toLowerCase();
+  let box = document.getElementById("suggestions");
+
+  box.innerHTML = "";
+
+  if (input === "") return;
+
+  let filtered = data.filter(item => item.includes(input));
+
+  filtered.forEach(item => {
+    let div = document.createElement("div");
+    div.classList.add("suggestion-item");
+    div.innerText = item;
+
+    div.onclick = function() {
+      document.getElementById("searchBox").value = item;
+      box.innerHTML = "";
+    };
+
+    box.appendChild(div);
+  });
+}
+</script>
+</body><footer>
+        <h2><a href="https://www.instagram.com/iamshourya_kanha">Click Here to Know About Developer</h2></a>
+        <p>Hey! it's me, Shourya or Pytha baba😅. I literally took 2 months to build this site. So please give me a
+            feedback about it, and yes, this site is under programming, so not all games could be included. So suggest
+            any game you like me to add here.</p>
+        <p>© 2026 Cadencea I India</p>
+    </footer>
 </html>
