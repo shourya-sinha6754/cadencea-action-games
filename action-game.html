@@ -6,44 +6,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FONT -->
+    <!-- ICON -->
     <link rel="icon" type="image/png"
-        href="https://freepngdesign.com/content/uploads/images/banana-style-letter-c-4363.png" sizes="96x96">
+        href="https://freepngdesign.com/content/uploads/images/banana-style-letter-c-4363.png">
 
     <style>
         body {
             margin: 0;
-            background: #121212;
+            background: radial-gradient(circle at top, #111827, #0B0F1A);
             font-family: sans-serif;
-            color: white;
+            color: #E5E7EB;
         }
 
         /* HEADER */
         .header {
-            background: linear-gradient(180deg, #000, #252525);
+            background: linear-gradient(180deg, #0B0F1A, #111827);
             padding: 40px 20px;
             text-align: center;
-            border-bottom: 4px solid red;
+            border-bottom: 2px solid #1F2937;
         }
 
         .logo {
-            font-family: 'Orbitron';
+            font-family: Orbitron;
             font-size: 8vw;
             letter-spacing: 6px;
             margin: 0;
             transition: 0.3s;
             display: inline-block;
+            color: #E5E7EB;
+            text-shadow: 0 0 25px #8B5CF6;
         }
 
-        /* 🔥 HOVER ANIMATION BACK */
         .logo:hover {
             transform: scale(1.1);
-            text-shadow: 0 0 20px white, 0 0 40px white;
+            text-shadow: 0 0 700px #8B5CF6, 0 0 10px #22D3EE;
         }
 
         .header h3 {
-            color: #ff4d4d;
+            color: #F43F5E;
             letter-spacing: 2px;
+        }
+
+        /* NOTICE BAR */
+        marquee {
+            background: #111827;
+            padding: 12px 0;
+            border-bottom: 1px solid #1F2937;
+        }
+
+        marquee h5 {
+            color: #9CA3AF;
+            margin: 0;
+        }
+
+        #Header_discription {
+            font-family: cursive;
+            text-decoration: line-through;
+
+        }
+
+
+        /* SECTION TITLES */
+        .title {
+            font-family: sans-serif;
+            margin-left: 30px;
+        }
+
+        .action {
+            color: #22D3EE;
+        }
+
+        .horror {
+            color: #F43F5E;
+        }
+
+        .racing {
+            color: #4ADE80;
+        }
+
+        .sports {
+            color: #8B5CF6;
         }
 
         /* GAME CARD */
@@ -53,60 +95,58 @@
             gap: 20px;
             padding: 30px;
             align-items: center;
+            background: #111827;
+            margin: 20px;
+            border-radius: 12px;
+            border: 1px solid #1F2937;
+            transition: 0.3s;
+        }
+
+        .game:hover {
+            transform: scale(1.02);
+            border-color: #8B5CF6;
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.5);
         }
 
         .game img {
             width: 100%;
             max-width: 300px;
             border-radius: 10px;
-            border: 2px solid #333;
+            border: 2px solid #1F2937;
             transition: 0.3s;
         }
 
-        /* 🔥 RED GLOW EFFECT BACK */
         .game img:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px red, 0 0 40px red;
+            box-shadow: 0 0 20px #22D3EE;
         }
 
         .game-text {
             flex: 1;
             font-size: 16px;
             line-height: 1.6;
+            color: #9CA3AF;
         }
 
-        .title {
-            color: red;
-            font-family: 'Orbitron';
-            margin-left: 30px;
+        .redirect {
+            color: #F43F5E;
         }
 
         /* FOOTER */
         footer {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background: #0B0F1A;
             text-align: center;
             padding: 30px;
+            border-top: 1px solid #1F2937;
         }
 
-        /* MOBILE FIX */
-        @media (max-width: 768px) {
-            .game {
-                flex-direction: column;
-                text-align: center;
-            }
+        footer a {
+            color: #22D3EE;
+            text-decoration: none;
+        }
 
-            .title {
-                text-align: center;
-                margin-left: 0;
-            }
-
-            /* Disable hover scaling on mobile (prevents glitch) */
-            .logo:hover,
-            .game img:hover {
-                transform: none;
-                box-shadow: none;
-                text-shadow: none;
-            }
+        footer a:hover {
+            text-shadow: 0 0 10px #22D3EE;
         }
 
         /* POPUP */
@@ -121,14 +161,29 @@
         }
 
         .popup-content {
-            background: #1e2a38;
+            background: #111827;
             padding: 20px;
-            margin: 30% auto;
+            margin: 20% auto;
             width: 80%;
             max-width: 300px;
             text-align: center;
             border-radius: 10px;
+            border: 1px solid #1F2937;
             animation: fadeIn 0.5s ease;
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #8B5CF6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .popup button:hover {
+            box-shadow: 0 0 10px #8B5CF6;
         }
 
         @keyframes fadeIn {
@@ -143,12 +198,24 @@
             }
         }
 
-        .popup button {
-            margin-top: 10px;
-            padding: 8px 15px;
-            background: cyan;
-            border: none;
-            cursor: pointer;
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .game {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                text-align: center;
+                margin-left: 0;
+            }
+
+            .logo:hover,
+            .game img:hover {
+                transform: none;
+                box-shadow: none;
+                text-shadow: none;
+            }
         }
     </style>
 </head>
@@ -156,23 +223,26 @@
 <body>
 
 
-
     <!-- HEADER -->
     <div class="header">
         <h1 class="logo">CADENCEA</h1>
-        <h3>NEW ERA OF GAMES</h3>
+        <h3 id="Header_discription">NEW ERA OF GAMES</h3>
     </div>
-    <marquee style="background: #1a1a1a; padding: 12px 0; border-bottom: 1px solid #333;">
-        <h5 style="color:#b0b0b0; margin:0; font-weight: normal;">
-            Please note that Cadencea and its members don't support any illegal file downloads. All downloads are from
-            external links.
-        </h5>
-    </marquee>
 
-    <!-- GAME -->
-    <h1 class="title">GTA V (PC)</h1>
+    <marquee>
+        <h5>
+            Please note that Cadencea doesn't support illegal downloads. All links are external.All the images are used
+            for Representation purpose only!!!
+        </h5>
+    </marquee><br><br>
+    <center><input type="text" id="searchBox" onkeyup="showSuggestions()" placeholder="please use small letters only">
+        <div id="suggestions"></div>
+        <button id="searchBtn" onclick="goToContent()">Search</button>
+    </center>
+    <!-- gta v-->
+    <h1 id="gta v" class="title action">Grand Theft Auto V</h1>
     <div class="game">
-        <a href="https://oceantogames.com/123-2/">
+        <a href="https://oceantogames.com/123-2/" target="_blank">
             <img src="https://m.media-amazon.com/images/I/71UUdPcdR7L._AC_UF894,1000_QL80_.jpg">
         </a>
 
@@ -184,10 +254,12 @@
             execute heists under pressure from criminal elements and
             the government.
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to Download</b>
         </div>
     </div>
-    <h1 class="title">Red Dead Redemption 2</h1>
+
+    <!-- rdr 2-->
+    <h1 id="rdr 2" class="title horror">Red Dead Redemption 2</h1>
     <div class="game">
         <a href="https://oceantogames.com/red-dead-redemption-2-download-for-pc-20/" target="_blank">
             <img src="https://mrpcgamer.net/wp-content/uploads/2024/05/Red_Dead_Redemption_2_main_jpg.webp">
@@ -201,14 +273,15 @@
             navigating the decline of the Wild West era while dealing
             with internal gang loyalty and external pressures from
             lawmen, says Fandom.
-
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to download</b>
         </div>
     </div>
-    <h1 class="title">Grand Theft Auto San Andreas</h1>
+
+    <!-- gta san andreas -->
+    <h1 id="gta san andreas" class="title racing">Grand Theft Auto San Andreas</h1>
     <div class="game">
-        <a href="https://dl.gtasandresapk.com/GTA%20San%20Andreas%20PC%20by%20gtasandresapk.com%20(1).zip" target="_blank">
+        <a href="https://oceantogames.com/gta-san-andreas-download-download-link/" target="_blank">
             <img src="https://posterwa.com/cdn/shop/files/GAMES8_88fee65b-3c95-4b4d-accc-1b098cfbb2ad.jpg?v=1713855915">
         </a>
 
@@ -219,10 +292,12 @@
             to rebuild his gang, battle corrupt police, and navigate organized crime
             across three cities.
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to download</b>
         </div>
     </div>
-    <h1 class="title">Mafia II</h1>
+
+    <!-- SPORTS -->
+    <h1 id="mafia II" class="title sports">Mafia II</h1>
     <div class="game">
         <a href="https://oceantogames.com/mafia-ii-complete-free-download/" target="_blank">
             <img
@@ -238,10 +313,11 @@
             game combines cover-based shooting and driving, with a
             remastered Definitive Edition available
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to downlaod</b>
         </div>
     </div>
-    <h1 class="title">Minecraft Legends</h1>
+    <!-- minecraft -->
+    <h1 id="minecraft legends" class="title sports">Minecraft Legends</h1>
     <div class="game">
         <a href="https://oceantogames.com/minecraft-legends-v1-18-14350-free-download/" target="_blank">
             <img
@@ -255,12 +331,12 @@
             defenses, and command armies of mobs in real-time battles
             to destroy Piglin bases. It features campaign, co-op, and
             4v4 PvP modes.
-
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to downlaod</b>
         </div>
     </div>
-    <h1 class="title">God OF War</h1>
+    <!-- god of war -->
+    <h1 id="god of war" class="title sports">God Of War</h1>
     <div class="game">
         <a href="https://oceantogames.com/god-of-war-pc-game/" target="_blank">
             <img src="https://m.media-amazon.com/images/I/71v6kczDs4L._AC_UF894,1000_QL80_.jpg">
@@ -273,12 +349,12 @@
             Monica Studio, the series features brutal combat, traversing from
             Greek mythology, where Kratos becomes the new God of War, to
             Norse mythology in the 2018 reboot.
-
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to downlaod</b>
         </div>
     </div>
-    <h1 class="title">Poppy Playtime Chapter 2</h1>
+    <!-- poppy playtime 2 -->
+    <h1 id="poppy playtime 2" class="title sports">Poppy Playtime Chapter 2</h1>
     <div class="game">
         <a href="https://oceantogames.com/poppy-playtime-chapter-2/" target="_blank">
             <img
@@ -286,63 +362,35 @@
         </a>
 
         <div class="game-text">
-            Poppy Playtime - Chapter 2: Fly in a Web
-            is a first-person horror-puzzle game where
-            you descend deeper into the abandoned Playtime Co.
-            factory. As an ex-employee, you must escape the
-            clutches of a new, vengeful antagonist named Mommy
-            Long Legs by playing deadly games—Musical Memory,
-            Wack-a-Wuggy, and Statues—using an upgraded GrabPack
-            with green hand capabilities.
+            God of War is a renowned action-adventure franchise centered on
+            Kratos, a Spartan warrior who, after being tricked into killing
+            his family, rebels against the Olympian gods. Developed by Santa
+            Monica Studio, the series features brutal combat, traversing from
+            Greek mythology, where Kratos becomes the new God of War, to
+            Norse mythology in the 2018 reboot.
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to downlaod</b>
         </div>
     </div>
-    <h1 class="title">Call of Duty: Modern Warfare III</h1>
+    <!-- call of duty mordern warfare 2 -->
+    <h1 id="call of duty mordern warfare 3" class="title sports">Call of Duty: Modern Warfare III</h1>
     <div class="game">
-        <a href="https://www.apunkasoftware.net/vlink/02120846617" target=_blank>
+        <a href="https://www.apunkasoftware.net/vlink/02120846617" target="_blank">
             <img
                 src="https://m.media-amazon.com/images/M/MV5BMzc4NDc2OWItMTJmNy00MWQxLWExMzktNGIwYjA3MGVlZTE3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
         </a>
 
         <div class="game-text">
-            <b><u><I>Server's Owned</u></I></b>
-            <p>Released in 2023,
-                Call of Duty: Modern Warfare III is a fast-paced first-person shooter that directly continues the story
-                of Task Force 141 against Vladimir Makarov. While criticized for a short, rushed campaign, it features
-                modernized, nostalgic multiplayer maps and an open-world PvE Zombies mode.
-                <br><br>
-            </p>
-            <b style="color:red;">Tap image to download</b>
+            Released in 2023,
+            Call of Duty: Modern Warfare III is a fast-paced first-person shooter that directly continues the story
+            of Task Force 141 against Vladimir Makarov. While criticized for a short, rushed campaign, it features
+            modernized, nostalgic multiplayer maps and an open-world PvE Zombies mode.
+            <br><br>
+            <b class="redirect">Tap image to downlaod</b>
         </div>
     </div>
-<h1 class="title">Floopy Minecraft</h1>
-    <div class="game">
-        <a href="https://gsf-fl.softonic.com/fc5/c29/48f93a668fce5a9166368eefa74cee2bdd/floppy_minecraft_windows.zip?Expires=1774116757&Signature=86e511606aa2724f9e9ec4abe9cd886ae84df2cf&url=https://floppy-minecraft.en.softonic.com/&Filename=floppy_minecraft_windows.zip" target=_blank>
-            <img
-                src="https://m.media-amazon.com/images/I/81qrMVaZigL._AC_UF894,1000_QL80_.jpg">
-        </a>
-
-        <div class="game-text">
-            <b><u><I>Server's Owned</u></I></b>
-            <p>Floppy Minecraft" (or Bad Minecraft) is
-               a fan-made, heavily modified version of Minecraft focused on surreal, physics-based chaos rather than building. 
-                It features ragdoll physics, where mobs and blocks fall realistically, and includes a gun to fight zombies. It 
-                is known for its intentionally poor performance, low-quality textures, and bizarre, "floppy" movement.
-                <br><br>
-            </p>
-            <b style="color:red;">Tap image to download</b>
-        </div>
-    </div>
-
     <!-- FOOTER -->
-    <footer>
-        <h2><a href="https://www.instagram.com/iamshourya_kanha">Click Here To Know About The Developer</h2></a>
-        <p>Hey! it's me, Shourya or Pytha baba😅. I literally took 2 months to build this site. So please give me a
-            feedback about it, and yes, this site is under programming, so not all games could be included. So suggest
-            any game you like me to add here.</p>
-        <p>© 2026 Cadencea I India</p>
-    </footer>
+
 
     <script>
         window.onload = function () {
@@ -353,7 +401,122 @@
             document.getElementById("popup").style.display = "none";
         }
     </script>
+    <script>
+        function goToContent() {
+            let input = document.getElementById("searchBox").value.trim();
 
+            let element = document.getElementById(input);
+
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+    </script>
+    <style>
+        #searchBtn {
+            padding: 12px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+            background: transparent;
+            color: #00f7ff;
+            border: 2px solid #00f7ff;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 1px #00f7ff;
+            transition: 0.3s;
+        }
+
+        #searchBtn:hover {
+            background: #00f7ff;
+            color: #020617;
+            box-shadow: 0 0 20px #00f7ff;
+        }
+
+        #suggestions {
+            position: absolute;
+            left: 46.5%;
+            transform: translateX(-50%);
+            width: 240px;
+            background: #020617;
+            border: 1px solid #0B0F1A;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .suggestion-item {
+            padding: 10px;
+            cursor: pointer;
+            color: #00f7ff;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .suggestion-item:hover {
+            background: #00f7ff;
+            color: #020617;
+        }
+
+        #searchBox {
+            padding: 12px;
+            width: 240px;
+            font-size: 16px;
+            background: #020617;
+            color: #00f7ff;
+            border: 2px solid #00f7ff;
+            border-radius: 8px;
+            outline: none;
+            box-shadow: 0 0 1px #00f7ff;
+            transition: 0.3s;
+        }
+
+        #searchBox::placeholder {
+            color: #00f7ff88;
+        }
+
+        #searchBox:focus {
+            box-shadow: 0 0 15px #00f7ff, 0 0 25px #00f7ff;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+    <script>
+        const data = ["gta v", "call of duty mordern warfare 3", "god of war", "minecraft legends", "mafia II", "gta san andreas", "rdr 2"];
+
+        function showSuggestions() {
+            let input = document.getElementById("searchBox").value.toLowerCase();
+            let box = document.getElementById("suggestions");
+
+            box.innerHTML = "";
+
+            if (input === "") return;
+
+            let filtered = data.filter(item => item.includes(input));
+
+            filtered.forEach(item => {
+                let div = document.createElement("div");
+                div.classList.add("suggestion-item");
+                div.innerText = item;
+
+                div.onclick = function () {
+                    document.getElementById("searchBox").value = item;
+                    box.innerHTML = "";
+                };
+
+                box.appendChild(div);
+            });
+        }
+    </script>
 </body>
+<footer>
+    <h2><a href="https://www.instagram.com/iamshourya_kanha">Click Here to Know About Developer</h2></a>
+    <p>Hey! it's me, Shourya or Pytha baba😅. I literally took 2 months to build this site. So please give me a
+        feedback about it, and yes, this site is under programming, so not all games could be included. So suggest
+        any game you like me to add here.</p>
+    <p>© 2026 Cadencea I India</p>
+</footer>
 
 </html>
