@@ -139,26 +139,29 @@
 
         /* POPUP */
         .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-        }
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
+    background: #020617; /* solid background */
+    z-index: 9999; /* bring popup above everything */
+}
         .popup-content {
-            background: #111827;
-            padding: 20px;
-            margin: 20% auto;
-            width: 80%;
-            max-width: 300px;
-            text-align: center;
-            border-radius: 10px;
-            border: 1px solid #1F2937;
-            animation: fadeIn 0.5s ease;
-        }
+    background: #111827;
+    padding: 20px;
+    margin: 20% auto;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #1F2937;
+
+    position: relative;
+    z-index: 10000; /* ensures it's above overlay */
+}
 
         .popup button {
             margin-top: 10px;
