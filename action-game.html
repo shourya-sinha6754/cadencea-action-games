@@ -499,7 +499,7 @@
 
             if (input === "") return;
 
-            let filtered = data.filter(item => item.includes(input));
+            let filtered = data.filter(item => item.toLowerCase().includes(input));
 
             filtered.forEach(item => {
                 let div = document.createElement("div");
