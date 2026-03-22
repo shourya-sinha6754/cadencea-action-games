@@ -6,44 +6,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FONT -->
+    <!-- ICON -->
     <link rel="icon" type="image/png"
-        href="https://freepngdesign.com/content/uploads/images/banana-style-letter-c-4363.png" sizes="96x96">
+        href="https://freepngdesign.com/content/uploads/images/banana-style-letter-c-4363.png">
 
     <style>
         body {
             margin: 0;
-            background: #121212;
+            background: radial-gradient(circle at top, #111827, #0B0F1A);
             font-family: sans-serif;
-            color: white;
+            color: #E5E7EB;
         }
 
         /* HEADER */
         .header {
-            background: linear-gradient(180deg, #000, #252525);
+            background: linear-gradient(180deg, #0B0F1A, #111827);
             padding: 40px 20px;
             text-align: center;
-            border-bottom: 4px solid red;
+            border-bottom: 2px solid #1F2937;
         }
 
         .logo {
-            font-family: 'Orbitron';
+            font-family: Orbitron;
             font-size: 8vw;
             letter-spacing: 6px;
             margin: 0;
             transition: 0.3s;
             display: inline-block;
+            color: #E5E7EB;
+            text-shadow: 0 0 25px #8B5CF6;
         }
 
-        /* 🔥 HOVER ANIMATION BACK */
         .logo:hover {
             transform: scale(1.1);
-            text-shadow: 0 0 20px white, 0 0 40px white;
+            text-shadow: 0 0 700px #8B5CF6, 0 0 10px #22D3EE;
         }
 
         .header h3 {
-            color: #ff4d4d;
+            color: #F43F5E;
             letter-spacing: 2px;
+        }
+
+        /* NOTICE BAR */
+        marquee {
+            background: #111827;
+            padding: 12px 0;
+            border-bottom: 1px solid #1F2937;
+        }
+
+        marquee h5 {
+            color: #9CA3AF;
+            margin: 0;
+        }
+
+        #Header_discription {
+            font-family: cursive;
+            text-decoration: line-through;
+
+        }
+
+
+        /* SECTION TITLES */
+        .title {
+            font-family: sans-serif;
+            margin-left: 30px;
+        }
+
+        .action {
+            color: #22D3EE;
+        }
+
+        .horror {
+            color: #F43F5E;
+        }
+
+        .racing {
+            color: #4ADE80;
+        }
+
+        .sports {
+            color: #8B5CF6;
         }
 
         /* GAME CARD */
@@ -53,60 +95,58 @@
             gap: 20px;
             padding: 30px;
             align-items: center;
+            background: #111827;
+            margin: 20px;
+            border-radius: 12px;
+            border: 1px solid #1F2937;
+            transition: 0.3s;
+        }
+
+        .game:hover {
+            transform: scale(1.02);
+            border-color: #8B5CF6;
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.5);
         }
 
         .game img {
             width: 100%;
             max-width: 300px;
             border-radius: 10px;
-            border: 2px solid #333;
+            border: 2px solid #1F2937;
             transition: 0.3s;
         }
 
-        /* 🔥 RED GLOW EFFECT BACK */
         .game img:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px red, 0 0 40px red;
+            box-shadow: 0 0 20px #22D3EE;
         }
 
         .game-text {
             flex: 1;
             font-size: 16px;
             line-height: 1.6;
+            color: #9CA3AF;
         }
 
-        .title {
-            color: red;
-            font-family: 'Orbitron';
-            margin-left: 30px;
+        .redirect {
+            color: #F43F5E;
         }
 
         /* FOOTER */
         footer {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background: #0B0F1A;
             text-align: center;
             padding: 30px;
+            border-top: 1px solid #1F2937;
         }
 
-        /* MOBILE FIX */
-        @media (max-width: 768px) {
-            .game {
-                flex-direction: column;
-                text-align: center;
-            }
+        footer a {
+            color: #22D3EE;
+            text-decoration: none;
+        }
 
-            .title {
-                text-align: center;
-                margin-left: 0;
-            }
-
-            /* Disable hover scaling on mobile (prevents glitch) */
-            .logo:hover,
-            .game img:hover {
-                transform: none;
-                box-shadow: none;
-                text-shadow: none;
-            }
+        footer a:hover {
+            text-shadow: 0 0 10px #22D3EE;
         }
 
         /* POPUP */
@@ -121,14 +161,29 @@
         }
 
         .popup-content {
-            background: #1e2a38;
+            background: #111827;
             padding: 20px;
-            margin: 30% auto;
+            margin: 20% auto;
             width: 80%;
             max-width: 300px;
             text-align: center;
             border-radius: 10px;
+            border: 1px solid #1F2937;
             animation: fadeIn 0.5s ease;
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #8B5CF6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .popup button:hover {
+            box-shadow: 0 0 10px #8B5CF6;
         }
 
         @keyframes fadeIn {
@@ -143,12 +198,24 @@
             }
         }
 
-        .popup button {
-            margin-top: 10px;
-            padding: 8px 15px;
-            background: cyan;
-            border: none;
-            cursor: pointer;
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .game {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                text-align: center;
+                margin-left: 0;
+            }
+
+            .logo:hover,
+            .game img:hover {
+                transform: none;
+                box-shadow: none;
+                text-shadow: none;
+            }
         }
     </style>
 </head>
@@ -156,23 +223,32 @@
 <body>
 
 
-
     <!-- HEADER -->
     <div class="header">
-       <h1 class="logo"><a href="https://shourya-sinha6754.github.io/Cadencea/"><font style="color:#ffffff;"><u> CADENCEA </h1></a></font></u>
-        <h3>NEW ERA OF GAMES</h3>
+        <h1 class="logo"><a id="link_main" href="https://shourya-sinha6754.github.io/Cadencea/">CADENCEA</h1></a>
+        <h3 id="Header_discription">NEW ERA OF GAMES</h3>
     </div>
-    <marquee style="background: #1a1a1a; padding: 12px 0; border-bottom: 1px solid #333;">
-        <h5 style="color:#b0b0b0; margin:0; font-weight: normal;">
-            Please note that Cadencea and its members don't support any illegal file downloads. All downloads are from
-            external links. All the images used are for reprentation purpose only.
-        </h5>
-    </marquee>
+    <style>
+        #link_main {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
 
-    <!-- GAME -->
-    <h1 class="title">Need for Speed - Carbon CE</h1>
+    <marquee>
+        <h5>
+            Please note that Cadencea doesn't support illegal downloads. All links are external.All the images are used
+            for Representation purpose only!!!
+        </h5>
+    </marquee><br><br>
+    <center><input type="text" id="searchBox" onkeyup="showSuggestions()" placeholder="First Letter Capital Only...">
+        <div id="suggestions"></div>
+        <button id="searchBtn" onclick="goToContent()">Search</button>
+    </center>
+    <!--Need for Speed - Carbon CE-->
+    <h1 id="Need for Speed - Carbon CE" class="title action">Need for Speed - Carbon CE</h1>
     <div class="game">
-        <a href="https://thefileslocker.net/iu3wtv5etzw3.html">
+        <a href="https://thefileslocker.net/iu3wtv5etzw3.html" target="_blank">
             <img
                 src="https://m.media-amazon.com/images/M/MV5BZWVmNDQ3MDktZWZjNC00ODc5LWJkYmUtMDcyN2Q4NDc1NmI3XkEyXkFqcGc@._V1_.jpg">
         </a>
@@ -183,12 +259,14 @@
             Zonda F), additional challenges, unique vinyls, and a bonus DVD. It continues the Most Wanted storyline,
             focusing on night-time canyon racing, crew management, and deep car customization via the "Autosculpt" tool
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to Download</b>
         </div>
     </div>
-    <h1 class="title">Need for Speed Payback Deluxe Edition</h1>
+
+    <!-- Need for Speed Payback Deluxe Edition-->
+    <h1 id="Need for Speed Payback Deluxe Edition" class="title horror">Need for Speed Payback Deluxe Edition</h1>
     <div class="game">
-        <a href="https://www.akglinks.com/vlink/02104946187">
+        <a href="https://www.akglinks.com/vlink/02104946187" target="_blank">
             <img
                 src="https://images.g2a.com/360x600/1x1x1/need-for-speed-payback-deluxe-edition-p10000083795/9300d0b85cd0493a90ed928b">
         </a>
@@ -198,12 +276,14 @@
             early access, exclusive customization items (Platinum Blue Underglow, license plate), 5 shipments, and
             in-game discounts. It includes the Platinum Car Pack, Deluxe Edition items, and upcoming DLC packs.
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to download</b>
         </div>
     </div>
-    <h1 class="title">CarX Street</h1>
+
+    <!-- CarX Street -->
+    <h1 id="CarX Street" class="title racing">CarX Street</h1>
     <div class="game">
-        <a href="https://www.apunkasoftware.net/vlink/02065044789">
+        <a href="https://www.apunkasoftware.net/vlink/02065044789" target="_blank">
             <img
                 src="https://m.media-amazon.com/images/M/MV5BZjYxNDgxMzctZGU0MC00ZTYxLWFkMjItY2FlMWU0NDRhYjk0XkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg">
         </a>
@@ -215,12 +295,14 @@
             racing experience on handheld devices, offering a "living, breathing" Sunset City with a dynamic day/night
             cycle.
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to download</b>
         </div>
     </div>
-    <h1 class="title">Tear It Up Remix</h1>
+
+    <!-- Tear It Up Remix -->
+    <h1 id="Tear It Up Remix" class="title sports">Tear It Up Remix</h1>
     <div class="game">
-        <a href="https://thefileslocker.net/fyntklpy9f1f.html">
+        <a href="https://thefileslocker.net/fyntklpy9f1f.html" target="_blank">
             <img src="https://mrpcgamer.net/wp-content/uploads/2025/12/TearItUp__Remix_main_jpg.webp">
         </a>
 
@@ -228,12 +310,13 @@
             TearItUp Remix is also a video game on Steam, described as a top-down combat racing game featuring monster
             trucks and 4x4s, focusing on destruction, customization, and arena combat.
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to downlaod</b>
         </div>
     </div>
-    <h1 class="title">Bean Ng.Drive</h1>
+    <!-- Bean Ng.Drive -->
+    <h1 id="Bean Ng.Drive" class="title sports">Bean Ng.Drive</h1>
     <div class="game">
-        <a href="https://www.apunkasoftware.net/vlink/02111346499">
+        <a href="https://www.apunkasoftware.net/vlink/02111346499" target="_blank">
             <img src="https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1sym.jpg">
         </a>
 
@@ -244,32 +327,31 @@
             driving scenarios, and sandbox exploration.
 
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to downlaod</b>
         </div>
     </div>
-    <h1 class="title">Need Of Speed: Most Wanted</h1>
+    <!-- Need Of Speed: Most Wanted -->
+    <h1 id="Need Of Speed: Most Wanted" class="title sports">Need Of Speed: Most Wanted</h1>
     <div class="game">
-        <a
-            href="https://www.mediafire.com/file_premium/xipwd29nh4dc20f/NFS_MW_2012_Unofficial_Remake_-_%2528Www.ApunKaGames.Net%2529.rar/file">
+        <a href="https://www.mediafire.com/file_premium/xipwd29nh4dc20f/NFS_MW_2012_Unofficial_Remake_-_%2528Www.ApunKaGames.Net%2529.rar/file"
+            target="_blank">
             <img
                 src="https://m.media-amazon.com/images/M/MV5BNTkyYWNmYzktOWQ5Ni00YmJkLTkxYWYtMGRjZDM5NDBhNDU1XkEyXkFqcGc@._V1_.jpg">
         </a>
 
         <div class="game-text">
-            God of War is a renowned action-adventure franchise centered on
-            Kratos, a Spartan warrior who, after being tricked into killing
-            his family, rebels against the Olympian gods. Developed by Santa
-            Monica Studio, the series features brutal combat, traversing from
-            Greek mythology, where Kratos becomes the new God of War, to
-            Norse mythology in the 2018 reboot.
-
+            Need for Speed: Most Wanted (2005) is an iconic open-world racing game focused on illegal street racing,
+            high-stakes police chases, and rising to the top of the "Blacklist" of 15 elite drivers in Rockport city.
+            Players customize cars to outrun police, win pink-slip races, and defeat rivals to reclaim their stolen BMW
+            M3 GTR.
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to downlaod</b>
         </div>
     </div>
-    <h1 class="title">Need for Speed Hot Pursuit Remastered</h1>
+    <!-- Need for Speed Hot Pursuit Remastered -->
+    <h1 id="Need for Speed Hot Pursuit Remastered" class="title sports">Need for Speed Hot Pursuit Remastered</h1>
     <div class="game">
-        <a href="https://www.apunkasoftware.net/vlink/02083545533">
+        <a href="https://www.apunkasoftware.net/vlink/02083545533" target="_blank">
             <img
                 src="https://cdna.artstation.com/p/assets/images/images/030/883/580/large/mighoet-sundback-nfs-hot-pursuit-remastered-bigbox.jpg?1601948798">
         </a>
@@ -280,39 +362,37 @@
             County. It features updated graphics, all original DLC, and cross-platform multiplayer powered by the
             "Autolog" system, allowing players to compete as both racers and cops with tactical weaponry.
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to downlaod</b>
         </div>
     </div>
-    <h1 class="title">Tokyo Xtreme Racer</h1>
-    <div class="game">
-        <a href="https://oceantogames.com/tokyo-xtreme-racer-v1-0-2-free-download/">
-            <img
-                src="https://sm.ign.com/t/ign_pk/cover/t/tokyo-xtre/tokyo-xtreme-racer_wbxd.600.jpg">
-        </a>
-
-        <div class="game-text">
-            <b><u><i>Server's Owned</i></u></b>
-            <p>Tokyo Xtreme Racer
-            (known as Shutoko Battle in Japan) is a cult-classic, arcade-style street racing series focused on head-to-head 
-            night racing on Tokyo’s Shuto Expressway highways. Players modify Japanese cars and challenge rivals by flashing 
-            headlights, winning battles by depleting an opponent’s "Spirit Points" (SP) rather than reaching a traditional 
-            finish line.</p>
-            <br><br>
-            <b style="color:red;">Tap image to download</b>
-        </div>
-    </div>
-
-
-    <!-- FOOTER -->
-    <footer>
-        <h2><a href="https://www.instagram.com/iamshourya_kanha">Click Here to Know About Developer</h2></a>
-        <p>Hey! it's me, Shourya or Pytha baba😅. I literally took 2 months to build this site. So please give me a
-            feedback about it, and yes, this site is under programming, so not all games could be included. So suggest
-            any game you like me to add here.</p>
-        <p>© 2026 Cadencea I India</p>
-    </footer>
 
     <script>
+        const data = ["Need for Speed - Carbon CE", "Need for Speed Hot Pursuit Remastered", "Need Of Speed: Most Wanted", "Bean Ng.Drive", "Tear It Up Remix", "CarX Street", "Need for Speed Payback Deluxe Edition"];
+
+        function showSuggestions() {
+            let input = document.getElementById("searchBox").value.toLowerCase();
+            let box = document.getElementById("suggestions");
+
+            box.innerHTML = "";
+
+            if (input === "") return;
+
+            let filtered = data.filter(item => item.includes(input));
+
+            filtered.forEach(item => {
+                let div = document.createElement("div");
+                div.classList.add("suggestion-item");
+                div.innerText = item;
+
+                div.onclick = function () {
+                    document.getElementById("searchBox").value = item;
+                    box.innerHTML = "";
+                };
+
+                box.appendChild(div);
+            });
+        }
+
         window.onload = function () {
             document.getElementById("popup").style.display = "block";
         }
@@ -321,7 +401,102 @@
             document.getElementById("popup").style.display = "none";
         }
     </script>
+    <script>
+        function goToContent() {
+            let input = document.getElementById("searchBox").value.trim();
 
+            let element = document.getElementById(input);
+
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+    </script>
+    <style>
+        #searchBtn {
+            padding: 12px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+            background: transparent;
+            color: #00f7ff;
+            border: 2px solid #00f7ff;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 1px #00f7ff;
+            transition: 0.3s;
+        }
+
+        #searchBtn:hover {
+            background: #00f7ff;
+            color: #020617;
+            box-shadow: 0 0 20px #00f7ff;
+        }
+
+        #suggestions {
+            position: absolute;
+            left: 46.5%;
+            transform: translateX(-50%);
+            width: 240px;
+            background: #020617;
+            border: 1px solid #0B0F1A;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+
+        }
+
+        .suggestion-item {
+            padding: 10px;
+            cursor: pointer;
+            color: #00f7ff;
+            border-radius: 0 0 8px 8px;
+
+        }
+
+        .suggestion-item:hover {
+            background: #00f7ff;
+            color: #020617;
+        }
+
+        #searchBox {
+            padding: 12px;
+            width: 240px;
+            font-size: 16px;
+            background: #020617;
+            color: #00f7ff;
+            border: 2px solid #00f7ff;
+            border-radius: 8px;
+            outline: none;
+            box-shadow: 0 0 1px #00f7ff;
+            transition: 0.3s;
+        }
+
+        #searchBox::placeholder {
+            color: #00f7ff88;
+        }
+
+        #searchBox:focus {
+            box-shadow: 0 0 15px #00f7ff, 0 0 25px #00f7ff;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+    </script>
 </body>
+<footer>
+    <h2><a href="https://www.instagram.com/iamshourya_kanha">Click Here to Know About Developer</h2></a>
+    <p>Hey! it's me, Shourya or Pytha baba😅. I literally took 2 months to build this site. So please give me a
+        feedback about it, and yes, this site is under programming, so not all games could be included. So suggest
+        any game you like me to add here.</p>
+    <p>© 2026 Cadencea I India</p>
+</footer>
 
 </html>
