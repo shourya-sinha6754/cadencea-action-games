@@ -6,44 +6,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FONT -->
+    <!-- ICON -->
     <link rel="icon" type="image/png"
-        href="https://freepngdesign.com/content/uploads/images/banana-style-letter-c-4363.png" sizes="96x96">
+        href="https://freepngdesign.com/content/uploads/images/banana-style-letter-c-4363.png">
 
     <style>
         body {
             margin: 0;
-            background: #121212;
+            background: radial-gradient(circle at top, #111827, #0B0F1A);
             font-family: sans-serif;
-            color: white;
+            color: #E5E7EB;
         }
 
         /* HEADER */
         .header {
-            background: linear-gradient(180deg, #000, #252525);
+            background: linear-gradient(180deg, #0B0F1A, #111827);
             padding: 40px 20px;
             text-align: center;
-            border-bottom: 4px solid red;
+            border-bottom: 2px solid #1F2937;
         }
 
         .logo {
-            font-family: 'Orbitron';
+            font-family: Orbitron;
             font-size: 8vw;
             letter-spacing: 6px;
             margin: 0;
             transition: 0.3s;
             display: inline-block;
+            color: #E5E7EB;
+            text-shadow: 0 0 25px #8B5CF6;
         }
 
-        /* 🔥 HOVER ANIMATION BACK */
         .logo:hover {
             transform: scale(1.1);
-            text-shadow: 0 0 20px white, 0 0 40px white;
+            text-shadow: 0 0 700px #8B5CF6, 0 0 10px #22D3EE;
         }
 
         .header h3 {
-            color: #ff4d4d;
+            color: #F43F5E;
             letter-spacing: 2px;
+        }
+
+        /* NOTICE BAR */
+        marquee {
+            background: #111827;
+            padding: 12px 0;
+            border-bottom: 1px solid #1F2937;
+        }
+
+        marquee h5 {
+            color: #9CA3AF;
+            margin: 0;
+        }
+
+        #Header_discription {
+            font-family: cursive;
+            text-decoration: line-through;
+
+        }
+
+
+        /* SECTION TITLES */
+        .title {
+            font-family: sans-serif;
+            margin-left: 30px;
+        }
+
+        .action {
+            color: #22D3EE;
+        }
+
+        .horror {
+            color: #F43F5E;
+        }
+
+        .racing {
+            color: #4ADE80;
+        }
+
+        .sports {
+            color: #8B5CF6;
         }
 
         /* GAME CARD */
@@ -53,60 +95,58 @@
             gap: 20px;
             padding: 30px;
             align-items: center;
+            background: #111827;
+            margin: 20px;
+            border-radius: 12px;
+            border: 1px solid #1F2937;
+            transition: 0.3s;
+        }
+
+        .game:hover {
+            transform: scale(1.02);
+            border-color: #8B5CF6;
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.5);
         }
 
         .game img {
             width: 100%;
             max-width: 300px;
             border-radius: 10px;
-            border: 2px solid #333;
+            border: 2px solid #1F2937;
             transition: 0.3s;
         }
 
-        /* 🔥 RED GLOW EFFECT BACK */
         .game img:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px red, 0 0 40px red;
+            box-shadow: 0 0 20px #22D3EE;
         }
 
         .game-text {
             flex: 1;
             font-size: 16px;
             line-height: 1.6;
+            color: #9CA3AF;
         }
 
-        .title {
-            color: red;
-            font-family: 'Orbitron';
-            margin-left: 30px;
+        .redirect {
+            color: #F43F5E;
         }
 
         /* FOOTER */
         footer {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background: #0B0F1A;
             text-align: center;
             padding: 30px;
+            border-top: 1px solid #1F2937;
         }
 
-        /* MOBILE FIX */
-        @media (max-width: 768px) {
-            .game {
-                flex-direction: column;
-                text-align: center;
-            }
+        footer a {
+            color: #22D3EE;
+            text-decoration: dotted underline;
+        }
 
-            .title {
-                text-align: center;
-                margin-left: 0;
-            }
-
-            /* Disable hover scaling on mobile (prevents glitch) */
-            .logo:hover,
-            .game img:hover {
-                transform: none;
-                box-shadow: none;
-                text-shadow: none;
-            }
+        footer a:hover {
+            text-shadow: 0 0 10px #22D3EE;
         }
 
         /* POPUP */
@@ -121,14 +161,29 @@
         }
 
         .popup-content {
-            background: #1e2a38;
+            background: #111827;
             padding: 20px;
-            margin: 30% auto;
+            margin: 20% auto;
             width: 80%;
             max-width: 300px;
             text-align: center;
             border-radius: 10px;
+            border: 1px solid #1F2937;
             animation: fadeIn 0.5s ease;
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #8B5CF6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .popup button:hover {
+            box-shadow: 0 0 10px #8B5CF6;
         }
 
         @keyframes fadeIn {
@@ -143,12 +198,24 @@
             }
         }
 
-        .popup button {
-            margin-top: 10px;
-            padding: 8px 15px;
-            background: cyan;
-            border: none;
-            cursor: pointer;
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .game {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                text-align: center;
+                margin-left: 0;
+            }
+
+            .logo:hover,
+            .game img:hover {
+                transform: none;
+                box-shadow: none;
+                text-shadow: none;
+            }
         }
     </style>
 </head>
@@ -156,26 +223,33 @@
 <body>
 
 
-
     <!-- HEADER -->
     <div class="header">
-        <h1 class="logo"><a href="https://shourya-sinha6754.github.io/Cadencea/">
-                <font style="color:#ffffff;"><u> CADENCEA </h1></a></font></u>
-        <h3>NEW ERA OF GAMES</h3>
+        <h1 class="logo"><a id="link_main" href="https://shourya-sinha6754.github.io/Cadencea/">CADENCEA</h1></a>
+        <h3 id="Header_discription">NEW ERA OF GAMES</h3>
     </div>
-    <marquee style="background: #1a1a1a; padding: 12px 0; border-bottom: 1px solid #333;">
-        <h5 style="color:#b0b0b0; margin:0; font-weight: normal;">
-            Please note that Cadencea and its members don't support any illegal file downloads. All downloads are from
-            external links. All the images used are for reprentation purpose only.
-        </h5>
-    </marquee>
+    <style>
+        #link_main {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
 
-    <!-- GAME -->
-    <h1 class="title">Fifa 23</h1>
+    <marquee>
+        <h5>
+            Please note that Cadencea doesn't support illegal downloads. All links are external.All the images are used
+            for Representation purpose only!!!
+        </h5>
+    </marquee><br><br>
+    <center><input type="text" id="searchBox" onkeyup="showSuggestions()" placeholder="First Letter Capital Only...">
+        <div id="suggestions"></div>
+        <button id="searchBtn" onclick="goToContent()">Search</button>
+    </center>
+    <!--Fifa 23-->
+    <h1 id="Fifa 23" class="title action">Fifa 23</h1>
     <div class="game">
-        <a href="https://www.apunkasoftware.net/vlink/02051544041">
-            <img
-                src="https://assets.altarofgaming.com/wp-content/uploads/2023/03/fifa-23-game-poster-altar-of-gaming-725x1024.jpg">
+        <a href="https://www.apunkasoftware.net/vlink/02051544041" target="_blank">
+            <img src="https://cdn.dotpe.in/longtail/store-items/8071193/oStTBNnL.webp">
         </a>
 
         <div class="game-text">
@@ -184,13 +258,33 @@
             It features HyperMotion2 technology for enhanced, realistic gameplay, introduces women’s club football, and
             includes both men’s and women’s World Cup modes.
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to Download</b>
         </div>
     </div>
-    <h1 class="title">WWE 2K25</h1>
+
+    <!-- WWE 2K25-->
+    <h1 id="WWE 2K25" class="title horror">WWE 2K25</h1>
     <div class="game">
-        <a href="https://www.apunkasoftware.net/vlink/02113746542">
-            <img src="https://www.kupywrestlingwallpapers.info/wallpapers/2024/roman-reigns-wwe-2k25.jpg">
+        <a href="https://www.apunkasoftware.net/vlink/02113746542" target="_blank">
+            <img
+                src="https://static.wikia.nocookie.net/pm-universe/images/3/30/WWE_2K25_cover.png/revision/latest?cb=20250628193953">
+        </a>
+
+        <div class="game-text">
+            The Need for Speed Payback Deluxe Edition is an enhanced version of the action-racing game, offering 3-day
+            early access, exclusive customization items (Platinum Blue Underglow, license plate), 5 shipments, and
+            in-game discounts. It includes the Platinum Car Pack, Deluxe Edition items, and upcoming DLC packs.
+            <br><br>
+            <b class="redirect">Tap image to download</b>
+        </div>
+    </div>
+
+    <!-- CarX Street -->
+    <h1 id="CarX Street" class="title racing">CarX Street</h1>
+    <div class="game">
+        <a href="https://www.apunkasoftware.net/vlink/02065044789" target="_blank">
+            <img
+                src="https://m.media-amazon.com/images/M/MV5BZjYxNDgxMzctZGU0MC00ZTYxLWFkMjItY2FlMWU0NDRhYjk0XkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg">
         </a>
 
         <div class="game-text">
@@ -199,14 +293,15 @@
             with returning "Chain Wrestling," and new "Underground" MMA-style matches. It highlights "The Bloodline"
             dynasty in Showcase mode, introduces intergender matches, and features online multiplayer in MyGM on the WWE
             2K website.
-
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to download</b>
         </div>
     </div>
-    <h1 class="title">EA Sports Cricket 2002 </h1>
+
+    <!-- EA Sports Cricket 2002 -->
+    <h1 id="EA Sports Cricket 2002" class="title sports">EA Sports Cricket 2002</h1>
     <div class="game">
-        <a href="https://thefileslocker.net/52cfb595tu1v.html">
+        <a href="https://thefileslocker.net/52cfb595tu1v.html" target="_blank">
             <img
                 src="https://assets-prd.ignimgs.com/2023/10/07/cricket02-1696702445238.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80">
         </a>
@@ -218,14 +313,14 @@
             international teams, it allows players to experience, realistic match conditions, where weather and pitch
             influence, ball movement
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to downlaod</b>
         </div>
     </div>
-    <h1 class="title">Pro Evolution Soccer 2019</h1>
+    <!-- Pro Evolution Soccer 2019 -->
+    <h1 id="Pro Evolution Soccer 2019" class="title sports">Pro Evolution Soccer 2019</h1>
     <div class="game">
-        <a href="https://www.apunkasoftware.net/vlink/02111546520">
-            <img
-                src="https://m.media-amazon.com/images/M/MV5BNGNiNTAwZDItYTA4NS00MTJjLWJhMzQtOWI1ZWU5NDAwZTU0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+        <a href="https://www.apunkasoftware.net/vlink/02111546520" target="_blank">
+            <img src="https://s.pacn.ws/1/p/vp/pro-evolution-soccer-2019-570617.18.jpg?v=s43hnp">
         </a>
 
         <div class="game-text">
@@ -234,14 +329,16 @@
             "The Power of Football" theme. It features enhanced visual fidelity with 4K HDR, increased player
             individuality, and visible fatigue, focusing on a refined on-pitch experience rather than extensive
             licensing.
+
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to downlaod</b>
         </div>
     </div>
-    <h1 class="title">3D Pool: Billiards and Snooker</h1>
+    <!-- 3D Pool: Billiards and Snooker -->
+    <h1 id="3D Pool: Billiards and Snooker" class="title sports">3D Pool: Billiards and Snooker</h1>
     <div class="game">
-        <a href="https://thefileslocker.net/575cz5icac2j.html">
-            <img src="https://e.snmc.io/lk/fv/x/7c5294f02faad0a1161db87f279a3a92/6793127">
+        <a href="https://thefileslocker.net/575cz5icac2j.html" target="_blank">
+            <img src="https://image.api.playstation.com/vulcan/img/rnd/202106/0415/Bj3mm4dWbH6nxJZnZovVQfZR.png">
         </a>
 
         <div class="game-text">
@@ -251,14 +348,15 @@
             customisable ball and cue skins, providing an arcade-like pool hall experience at home..
 
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to downlaod</b>
         </div>
     </div>
-    <h1 class="title">Franchise Hockey Manager 8</h1>
+    <!-- Franchise Hockey Manager 8 -->
+    <h1 id="Franchise Hockey Manager 8" class="title sports">Franchise Hockey Manager 8</h1>
     <div class="game">
-        <a href="https://thefileslocker.net/ydozs5upgj7l.html">
+        <a href="https://thefileslocker.net/ydozs5upgj7l.html" target="_blank">
             <img
-                src="https://cdn2.unrealengine.com/egs-franchisehockeymanager8-outoftheparkdevelopments-g1a-01-1920x1080-88adb0335121.jpg?resize=1&w=480&h=270&quality=medium">
+                src="https://cdn1.epicgames.com/offer/c0c1086e89f84494ba1c1da9c9500280/EGS_FranchiseHockeyManager8_OutoftheParkDevelopments_S2_1200x1600-731b93a3f55a4fc877db4a89e3a8e6f0">
         </a>
 
         <div class="game-text">
@@ -266,57 +364,38 @@
             is a detailed text-based sports management simulation released in Oct 2021 by Out of the Park Developments.
             It allows players to manage teams globally, featuring NHL licensing, deep financial management, historical
             play from 1917, and updated 2D game simulation.
-
             <br><br>
-            <b style="color:red;">Tap image to download</b>
+            <b class="redirect">Tap image to downlaod</b>
         </div>
     </div>
-    <h1 class="title">Forza Horizon 5</h1>
-    <div class="game">
-        <a href="https://www.apunkasoftware.net/vlink/02061044631">
-            <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Forza_Horizon_5_cover_art.jpg">
-        </a>
-
-        <div class="game-text">
-            Forza Horizon 5 is
-            an open-world arcade racing game set in a vibrant, diverse recreation of Mexico. Featuring hundreds of
-            customizable cars, it focuses on exploration, high-speed racing, and stunts across varied landscapes like
-            jungles, deserts, and cities. It offers a fun, accessible driving experience with dynamic weather and, in
-            some versions, advanced haptic feedback.
-            <br><br>
-            <b style="color:red;">Tap image to download</b>
-        </div>
-    </div>
-    <h1 class="title">Forza Horizon 4</h1>
-    <div class="game">
-        <a href="https://oceantogames.com/forza-horizon-4-ultimate-edition-free-download/">
-            <img src="https://upload.wikimedia.org/wikipedia/en/8/87/Forza_Horizon_4_cover.jpg">
-        </a>
-
-        <div class="game-text">
-            <b><u><I>System's Owned</u></I></b>
-            <p>AI Overview
-            Forza Horizon 4 is
-            an acclaimed open-world arcade racing game set in a fictionalized Great Britain, featuring dynamic, changing
-            seasons that alter gameplay and environments weekly. Developed by Playground Games and released in 2018, it
-            features over 750 licensed cars, allowing players to collect, modify, and drive through varied terrain in a
-            shared, social, 72-player server environment.
-            <br><br></p>
-            <b style="color:red;">Tap image to download</b>
-        </div>
-    </div>
-
-
-    <!-- FOOTER -->
-    <footer>
-        <h2><a href="https://www.instagram.com/iamshourya_kanha">Click Here to Know About Developer</h2></a>
-        <p>Hey! it's me, Shourya or Pytha baba😅. I literally took 2 months to build this site. So please give me a
-            feedback about it, and yes, this site is under programming, so not all games could be included. So suggest
-            any game you like me to add here.</p>
-        <p>© 2026 Cadencea I India</p>
-    </footer>
 
     <script>
+        const data = ["Bean Ng.Drive", "Need for Speed Hot Pursuit Remastered", "Need Of Speed: Most Wanted", "Need for Speed - Carbon CE", "Tear It Up Remix", "CarX Street", "Need for Speed Payback Deluxe Edition"];
+
+        function showSuggestions() {
+            let input = document.getElementById("searchBox").value.toLowerCase();
+            let box = document.getElementById("suggestions");
+
+            box.innerHTML = "";
+
+            if (input === "") return;
+
+            let filtered = data.filter(item => item.toLowerCase().includes(input));
+
+            filtered.forEach(item => {
+                let div = document.createElement("div");
+                div.classList.add("suggestion-item");
+                div.innerText = item;
+
+                div.onclick = function () {
+                    document.getElementById("searchBox").value = item;
+                    box.innerHTML = "";
+                };
+
+                box.appendChild(div);
+            });
+        }
+
         window.onload = function () {
             document.getElementById("popup").style.display = "block";
         }
@@ -325,7 +404,102 @@
             document.getElementById("popup").style.display = "none";
         }
     </script>
+    <script>
+        function goToContent() {
+            let input = document.getElementById("searchBox").value.trim();
 
+            let element = document.getElementById(input);
+
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+    </script>
+    <style>
+        #searchBtn {
+            padding: 12px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+            background: transparent;
+            color: #00f7ff;
+            border: 2px solid #00f7ff;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 1px #00f7ff;
+            transition: 0.3s;
+        }
+
+        #searchBtn:hover {
+            background: #00f7ff;
+            color: #020617;
+            box-shadow: 0 0 20px #00f7ff;
+        }
+
+        #suggestions {
+            position: absolute;
+            left: 46.5%;
+            transform: translateX(-50%);
+            width: 240px;
+            background: #020617;
+            border: 1px solid #0B0F1A;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+
+        }
+
+        .suggestion-item {
+            padding: 10px;
+            cursor: pointer;
+            color: #00f7ff;
+            border-radius: 0 0 8px 8px;
+
+        }
+
+        .suggestion-item:hover {
+            background: #00f7ff;
+            color: #020617;
+        }
+
+        #searchBox {
+            padding: 12px;
+            width: 240px;
+            font-size: 16px;
+            background: #020617;
+            color: #00f7ff;
+            border: 2px solid #00f7ff;
+            border-radius: 8px;
+            outline: none;
+            box-shadow: 0 0 1px #00f7ff;
+            transition: 0.3s;
+        }
+
+        #searchBox::placeholder {
+            color: #00f7ff88;
+        }
+
+        #searchBox:focus {
+            box-shadow: 0 0 15px #00f7ff, 0 0 25px #00f7ff;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+    </script>
 </body>
+<footer>
+    <h2><a href="https://www.instagram.com/iamshourya_kanha">Click Here to Know About Developer</h2></a>
+    <p>Hey! it's me, Shourya or Pytha baba😅. I literally took 2 months to build this site. So please give me a
+        feedback about it, and yes, this site is under programming, so not all games could be included. So suggest
+        any game you like me to add here.</p>
+    <p>© 2026 Cadencea I India</p>
+</footer>
 
 </html>
